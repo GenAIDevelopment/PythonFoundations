@@ -32,9 +32,10 @@ def sell_item():
 def load():
     """This method loads the values from csv file into dictionary
     """
+    # TODO: IF THE FILE DOEST NOT EXIST RETURN
     with open("inventory.csv","r") as inventory_file: 
         for line in inventory_file.readlines():
-            product = Product.create(line)
+            product = Product.create(line.strip())
             if product is not None:
                 add_item_to_inventory(product)
 
@@ -42,9 +43,10 @@ def save():
     """This method will save all the items in inventory to a file
     """
     with open("inventory.csv","w") as inventory_file:
-        inventory_file.write("id,name,price,quantity")
+        # TODO: correct save to write in new line
+        inventory_file.write("id,name,price,quantity\n")
         for product in inventory.values():
-            inventory_file.write((str)(product))
+            inventory_file.write(f"{(str)(product)}\n")
 
 if __name__ == "__main__":
     load()

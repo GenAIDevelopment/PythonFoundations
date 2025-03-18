@@ -18,7 +18,11 @@ class Product:
         if line.startswith("id,name,price,quantity"):
             return None
         details = line.split(",")
-        return Product(details[0],details[1],details[2], details[3])
+        return Product(
+            id = details[0],
+            name = details[1],
+            price = (float)(details[2]), 
+            quantity= (int)(details[3]))
 
 
     def sale(self,count:int):
