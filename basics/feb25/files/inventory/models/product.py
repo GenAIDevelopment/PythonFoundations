@@ -12,6 +12,14 @@ class Product:
         self.name = name
         self.price = price
         self.quantity = quantity
+    
+    @staticmethod
+    def create(line):
+        if line.startswith("id,name,price,quantity"):
+            return None
+        details = line.split(",")
+        return Product(details[0],details[1],details[2], details[3])
+
 
     def sale(self,count:int):
         """Sale

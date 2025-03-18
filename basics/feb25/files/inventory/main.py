@@ -27,25 +27,31 @@ def sell_item():
     quantity = int(input("Enter the items for sale: "))
     product = inventory[id]
     product.sale(quantity)
+    inventory[id] = product
+
+def load():
+    """This method loads the values from csv file into dictionary
+    """
+    with open("inventory.csv","r") as inventory_file: 
+        for line in inventory_file.readlines():
+            product = Product.create(line)
+            if product is not None:
+                add_item_to_inventory(product)
+
+def save():
+    """This method will save all the items in inventory to a file
+    """
+    with open("inventory.csv","w") as inventory_file:
+        inventory_file.write("id,name,price,quantity")
+        for product in inventory.values():
+            inventory_file.write((str)(product))
 
 if __name__ == "__main__":
-    # read from file into inventory
-    
-    # dell_keyboard = Product(1,"Dell-Keyboard", 450,10)
-    # print(dell_keyboard)
-    # try:
-    #     dell_keyboard.sale(100)
-    # except OutOfStockException:
-    #     print(f"The current stock available is {dell_keyboard.quantity}")
-    #     print("So sale not processed")
-    # print(dell_keyboard)
+    load()
     create_inventory(add_item_to_inventory)
+    save()
     sell_item()
-
-    # writing to a file
-    for id, product in inventory.items():
-        with open("inventory","w") as file:
-            file.write(str(product))
+    save()
 
 
 
