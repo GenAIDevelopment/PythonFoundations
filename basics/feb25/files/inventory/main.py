@@ -50,10 +50,13 @@ def save():
 
 if __name__ == "__main__":
     load()
+    # TODO: Ask if user wants to add a new item
     create_inventory(add_item_to_inventory)
     save()
+    # TODO: Ask if user wants to sell an item
     sell_item()
     save()
+    # TODO: Ask user if he wants to exit or create inventory or sale
 
 
 
