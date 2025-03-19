@@ -1,0 +1,16 @@
+{
+    "bahubali": {
+        "director": "ss rajamouli",
+        "actors": [
+            "Prabhas",
+            "Rana"
+        ]
+    },
+    "rrr": {
+        "director": "ss rajamouli",
+        "actors": [
+            "RamCharan",
+            "NTR"
+        ]
+    }
+}
