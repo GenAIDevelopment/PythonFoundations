@@ -1,0 +1,10 @@
+{
+    "name": "configuration",
+    "db-host": "localhost",
+    "db-port": 3306,
+    "credentials": {
+        "username": "admin",
+        "password": "admin@123"
+    }
+
+}
