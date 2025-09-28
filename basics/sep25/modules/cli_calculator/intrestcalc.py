@@ -29,9 +29,9 @@ def main():
         description="simple intrest caclulator",
         epilog="This is simple intrest calcualtor"
     )
-    parser.add_argument('-p', '--principal', type=float)
-    parser.add_argument('-t', '--time', type=int)
-    parser.add_argument('-r', '--rate', type=int)
+    parser.add_argument('-p', '--principal', type=float, default=10000, help="principal amount")
+    parser.add_argument('-t', '--time', type=int, default=3, help="time in years")
+    parser.add_argument('-r', '--rate', type=int, default=24, help="annual rate of intrest")
     args = parser.parse_args()
     print(simple_intrest(args.principal, args.rate, args.time))
 
