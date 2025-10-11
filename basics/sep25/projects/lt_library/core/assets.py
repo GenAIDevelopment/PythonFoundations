@@ -24,8 +24,6 @@ class LibraryItem:
     category: Optional[str] = None
     type: str = 'Book'
 
-# todo:
-# @dataclass
-# class Contact:
+
 
 
