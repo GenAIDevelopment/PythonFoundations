@@ -1,0 +1,11 @@
+Item_ID,Category,Item_Name,Price_INR,Is_Vegetarian,Description,Spice_Level
+M001,Appetizer,Vegetable Samosa (2 pcs),198.00000000000003,True,Crisp pastry filled with spiced potatoes and peas. Served with mint and tamarind chutney.,Medium
+M002,Appetizer,Chicken Tikka (6 pcs),495.00000000000006,False,"Boneless chicken marinated in yogurt and spices, cooked in the tandoor.",Medium
+M003,Main Course,Butter Chicken (Murgh Makhani),715.0000000000001,False,"Tandoor-cooked chicken in a rich, creamy tomato gravy. A house specialty.",Mild
+M004,Main Course,Palak Paneer,605.0,True,"Cottage cheese cubes simmered in a creamy spinach gravy, flavored with garlic and ginger.",Mild
+M005,Main Course,Lamb Rogan Josh,858.0000000000001,False,A signature Kashmiri curry: slow-cooked lamb in a rich gravy with aromatic spices.,Medium
+M006,Rice/Biryani,Chicken Biryani (Hyderabadi),770.0000000000001,False,Layered basmati rice and marinated chicken cooked on 'dum' (slow steam). Served with Raita.,Spicy
+M007,Rice/Biryani,Jeera Rice,330.0,True,Fragrant basmati rice tossed with roasted cumin seeds and ghee.,Mild
+M008,Bread,Butter Naan,121.00000000000001,True,Leavened flatbread baked in the tandoor and brushed with butter.,Mild
+M009,Dessert,Gulab Jamun (2 pcs),209.00000000000003,True,Deep-fried milk solids soaked in a rose and cardamom flavored sugar syrup.,Sweet
+M010,Beverages,Mango Lassi,242.00000000000003,True,"A refreshing blend of yogurt, mango pulp, and sugar.",Sweet
