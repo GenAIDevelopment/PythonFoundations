@@ -1,0 +1,20 @@
+[project]
+name = "user-details"
+version = "1.0.0"
+description = "Sample project with sqlalchemy"
+readme = "README.md"
+authors = [
+    { name = "shaikkhajaibrahim", email = "shaikkhajaibrahim@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "python-dotenv>=1.1.1",
+    "sqlalchemy>=2.0.44",
+]
+
+[project.scripts]
+user-details = "user_details:main"
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
