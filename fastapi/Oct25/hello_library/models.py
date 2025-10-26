@@ -1,3 +1,17 @@
+from pydantic import BaseModel, Field
+
+class Book(BaseModel):
+    id: str = Field(...,max_length=4, min_length=4,description="Id of the book")
+    title: str = Field(...,min_length=1, max_length=100, description="Title of the book")
+    author: str = Field(...,min_length=1, max_length=100, description="Author of the book")
+    genre: str = Field(...,min_length=1, max_length=100, description="Genre of the book")
+
+class BookRequest(BaseModel):
+    title: str = Field(...,min_length=1, max_length=100, description="Title of the book")
+    author: str = Field(...,min_length=1, max_length=100, description="Author of the book")
+    genre: str = Field(...,min_length=1, max_length=100, description="Genre of the book")
+
+
 books = [
     {
         "id": "B001",
@@ -36,3 +50,7 @@ books = [
         "genre": "Tragedy"
     },
 ]
+
+
+# Create a list of Book objects
+book_objects = [Book(**data) for data in books ]
