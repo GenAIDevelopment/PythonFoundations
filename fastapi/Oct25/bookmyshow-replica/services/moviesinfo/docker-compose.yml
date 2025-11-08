@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  moviesdb:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  moviesinfo:
+    build: .
+    ports:
+      - "18000:8000"
+    depends_on:
+      - moviesdb
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+
+volumes:
+  postgres_data:
